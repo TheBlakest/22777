@@ -73,7 +73,7 @@
         android:layout_marginLeft="3dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
-        android:src="@drawable/tescov2" />
+        android:src="@drawable/alegroov2" />
 
     <ImageView
         android:id="@+id/myPyszne"

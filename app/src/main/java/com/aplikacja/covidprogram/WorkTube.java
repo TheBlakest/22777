@@ -23,8 +23,6 @@ public class WorkTube extends YouTubeBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work_tube);
-        Button playButton = (Button)findViewById(R.id.startBtn);
-        Button pauseButton = (Button)findViewById(R.id.pauseBtn);
         workTubePlayerView = findViewById(R.id.workTubeView);
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
@@ -37,22 +35,6 @@ public class WorkTube extends YouTubeBaseActivity {
 
                 workTubePlayer.loadVideo(link);
 
-                playButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if(!workTubePlayer.isPlaying()){
-                            workTubePlayer.play();
-                        }
-                    }
-                });
-                pauseButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if(workTubePlayer.isPlaying()){
-                            workTubePlayer.pause();
-                        }
-                    }
-                });
                 workTubePlayer.setPlayerStateChangeListener(new YouTubePlayer.PlayerStateChangeListener() {
                     @Override
                     public void onLoading() {
@@ -83,7 +65,7 @@ public class WorkTube extends YouTubeBaseActivity {
                 Toast.makeText(WorkTube.this,"Error occurred", Toast.LENGTH_SHORT).show();
             }
         };
-        playButton.setOnClickListener(new View.OnClickListener() {
+        workTubePlayerView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 workTubePlayerView.initialize("AIzaSyB-RXJ0p-sIP0lskFVWtMX-nmE5eW_f--s",onInitializedListener);
