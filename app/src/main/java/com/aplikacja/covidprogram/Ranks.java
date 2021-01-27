@@ -1,6 +1,7 @@
 package com.aplikacja.covidprogram;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -69,6 +70,8 @@ public class Ranks extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_ranks, container, false);
+        Intent in = new Intent(getActivity(), Rankingsql.class);
+        startActivity(in);
         return v;
     }
 }

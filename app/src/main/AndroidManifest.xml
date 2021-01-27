@@ -19,12 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.COVIDProgram">
-        <activity android:name=".WashHends"></activity>
+        <activity android:name=".Rankingsql"></activity>
+        <activity android:name=".WashHends" />
         <activity android:name=".WHands" />
-        <activity
-            android:name=".WHand"
-            android:label="@string/title_activity_w_hand"
-            android:theme="@style/Theme.COVIDProgram.NoActionBar" />
         <activity android:name=".WorkTube" />
         <activity android:name=".WorkTubeList" />
         <activity android:name=".WebAction" />
