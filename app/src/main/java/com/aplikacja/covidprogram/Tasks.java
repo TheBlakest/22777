@@ -71,13 +71,21 @@ public class Tasks extends Fragment {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_tasks, container, false);
         wTub = (ImageView) v.findViewById(R.id.workTube);
+        wTub.setClipToOutline(true);
         wHands = (ImageView) v.findViewById(R.id.washHand);
+        wHands.setClipToOutline(true);
         wMask = (ImageView) v.findViewById(R.id.wearMask);
+        wMask.setClipToOutline(true);
         dezHands = (ImageView) v.findViewById(R.id.dezynHands);
+        dezHands.setClipToOutline(true);
         mAllegro = (ImageView) v.findViewById(R.id.myAllegro);
+        mAllegro.setClipToOutline(true);
         mTesco = (ImageView) v.findViewById(R.id.myTesco);
+        mTesco.setClipToOutline(true);
         mGov = (ImageView) v.findViewById(R.id.myGov);
+        mGov.setClipToOutline(true);
         mPyszne = (ImageView) v.findViewById(R.id.myPyszne);
+        mPyszne.setClipToOutline(true);
 
         wTub.setOnClickListener(new View.OnClickListener() {
             @Override
