@@ -23,10 +23,11 @@ public class Background1 extends AsyncTask<String, Void, String> {
     AlertDialog dialog;
     Context context;
     public Boolean login = false;
-    public Background1(Context context)
-    {
+
+    public Background1(Context context) {
         this.context = context;
     }
+
     @Override
     protected void onPreExecute() {
         dialog = new AlertDialog.Builder(context).create();
@@ -37,12 +38,12 @@ public class Background1 extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String s) {
         dialog.setMessage(s);
         dialog.show();
-      //  if(s.contains("login successful"))
-     //   {
-      //      Intent intent_name = new Intent();
-     //       intent_name.setClass(context.getApplicationContext(),Main2Activity.class);
-      //      context.startActivity(intent_name);
-      //  }
+        //  if(s.contains("login successful"))
+        //   {
+        //      Intent intent_name = new Intent();
+        //       intent_name.setClass(context.getApplicationContext(),Main2Activity.class);
+        //      context.startActivity(intent_name);
+        //  }
     }
 
     @Override
@@ -53,7 +54,7 @@ public class Background1 extends AsyncTask<String, Void, String> {
 
         String connstr = "http://localhost/login.php";
 
-        try{
+        try {
             URL url = new URL(connstr);
             HttpURLConnection http = (HttpURLConnection) url.openConnection();
             http.setRequestMethod("POST");
@@ -61,9 +62,9 @@ public class Background1 extends AsyncTask<String, Void, String> {
             http.setDoOutput(true);
 
             OutputStream ops = http.getOutputStream();
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(ops,"UTF-8"));
-            String data = URLEncoder.encode("user","UTF-8")+"="+ URLEncoder.encode(user,"UTF-8")
-                    +"&&"+URLEncoder.encode("pass","UTF-8")+"="+URLEncoder.encode(pass,"UTF-8");
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(ops, "UTF-8"));
+            String data = URLEncoder.encode("user", "UTF-8") + "=" + URLEncoder.encode(user, "UTF-8")
+                    + "&&" + URLEncoder.encode("pass", "UTF-8") + "=" + URLEncoder.encode(pass, "UTF-8");
             writer.write(data);
             writer.flush();
             writer.close();
@@ -71,18 +72,15 @@ public class Background1 extends AsyncTask<String, Void, String> {
 
 
             InputStream ips = http.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(ips,"ISO-8859-1"));
-            String line ="";
-            while ((line = reader.readLine()) != null)
-            {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(ips, "ISO-8859-1"));
+            String line = "";
+            while ((line = reader.readLine()) != null) {
                 result += line;
             }
             reader.close();
             ips.close();
             http.disconnect();
             return result;
-
-
 
 
         } catch (MalformedURLException e) {
