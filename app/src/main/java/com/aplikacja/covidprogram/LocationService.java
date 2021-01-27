@@ -1,12 +1,14 @@
 package com.aplikacja.covidprogram;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -40,10 +42,13 @@ public double latit;
                 double latitude = result.getLastLocation().getLatitude();
                 double longitude = result.getLastLocation().getLongitude();
                 Log.d("Location_Update", latitude + "," + longitude);
-                if(latit !=  latitude|| lonfleti != longitude)
-                Toast.makeText(getApplicationContext(), "Pamiętaj o masce", Toast.LENGTH_SHORT).show();
+                if(latit !=  latitude|| lonfleti != longitude) {
+                    Toast.makeText(getApplicationContext(), "Pamiętaj o masce", Toast.LENGTH_SHORT).show();
+                   // alert();
+                }
                 latit = latitude ;
                 lonfleti = longitude;
+
             }
         }
     };
@@ -131,5 +136,20 @@ public double latit;
         }
 
         return super.onStartCommand(intent, flags, startId);
+    }
+    public void alert(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+        builder.setTitle("Hey Maska!!!!");
+        builder.setMessage("Sprawdź czy nie zapomniałeś o masce");
+        // builder.setIcon(R.drawable.zaczekk2);
+        builder.setCancelable(true);
+        builder.setPositiveButton("Oooo... Prawie zapomniałem", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int i){
+                dialog.cancel();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 }
