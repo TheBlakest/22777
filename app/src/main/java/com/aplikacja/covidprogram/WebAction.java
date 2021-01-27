@@ -28,7 +28,7 @@ public class WebAction extends AppCompatActivity {
                     link = "https://allegro.pl/";
                     break;
                 case 1:
-                    link = "https://tesco.pl/zamkniecie-uslugi-e-zakupy/";
+                    link = "https://zakupy.auchan.pl/?gclid=Cj0KCQiAmL-ABhDFARIsAKywVacxyV7wrt7CVOT3pEySWxLwEwgnKYfOpctcUbAdYb1OEgdqh5ELi38aApKVEALw_wcB";
                     break;
                 case 2:
                     link = "https://www.gov.pl/web/koronawirus";

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aplikacja.covidprogram">
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <queries>
-            <intent>
-                <action android:name="com.google.android.youtube.api.service.START" />
-            </intent>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
     </queries>
 
     <application
@@ -15,7 +18,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.COVIDProgram">
-        <activity android:name=".WorkTube"></activity>
+        <activity android:name=".WHands"></activity>
+        <activity
+            android:name=".WHand"
+            android:label="@string/title_activity_w_hand"
+            android:theme="@style/Theme.COVIDProgram.NoActionBar" />
+        <activity android:name=".WorkTube" />
         <activity android:name=".WorkTubeList" />
         <activity android:name=".WebAction" />
         <activity android:name=".MainActivity">
@@ -25,7 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
 
 </manifest>
