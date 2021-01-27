@@ -98,7 +98,8 @@ public class Tasks extends Fragment {
         wHands.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"Mask",Toast.LENGTH_SHORT);
+                Intent in = new Intent(getActivity(), WashHends.class);
+                startActivity(in);
             }
         });
 
@@ -112,8 +113,8 @@ public class Tasks extends Fragment {
         dezHands.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"Dezy",Toast.LENGTH_SHORT);
-
+                Intent in = new Intent(getActivity(), WashHends.class);
+                startActivity(in);
             }
         });
         mAllegro.setOnClickListener(new View.OnClickListener() {
