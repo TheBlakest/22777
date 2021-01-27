@@ -98,16 +98,15 @@ public class Tasks extends Fragment {
         wHands.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getActivity(), WHands.class);
-                startActivity(in);
+                Toast.makeText(getContext(),"Mask",Toast.LENGTH_SHORT);
             }
         });
 
         wMask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"Mask",Toast.LENGTH_SHORT);
-
+                Intent in = new Intent(getActivity(), WHands.class);
+                startActivity(in);
             }
         });
         dezHands.setOnClickListener(new View.OnClickListener() {
