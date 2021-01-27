@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Ranks"
-    android:background="@color/Non">
+    android:background="@drawable/bg_gradient">
 
     <!-- TODO: Update blank fragment layout -->
 

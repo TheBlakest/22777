@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Tasks"
-    android:background="@color/Magic">
+   android:background="@drawable/bg_gradient">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -15,9 +15,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/custom_cell"
         android:src="@drawable/worktubev2" />
 
     <ImageView
@@ -26,9 +27,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+
+        android:background="@drawable/custom_cell"
         android:src="@drawable/raczkiv2" />
 
     <ImageView
@@ -37,9 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/workTube"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/custom_cell"
         android:src="@drawable/maskav2" />
 
     <ImageView
@@ -48,9 +52,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/washHand"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_cell"
         android:src="@drawable/dezynfv2" />
 
     <ImageView
@@ -59,9 +64,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/wearMask"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/custom_cell"
         android:src="@drawable/alegroov2" />
 
     <ImageView
@@ -70,10 +76,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dezynHands"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp"
-        android:src="@drawable/zakupy20" />
+
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_cell"
+       android:src="@drawable/pysznev2"/>
+
 
     <ImageView
         android:id="@+id/myPyszne"
@@ -81,9 +90,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/myTesco"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_cell"
         android:src="@drawable/pysznev2" />
 
     <ImageView
@@ -92,9 +102,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/myAllegro"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/custom_cell"
         android:src="@drawable/govv2" />
 
 </RelativeLayout>
